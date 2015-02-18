@@ -31,7 +31,7 @@ for my $rr (@reply) {
 	if ($support{$rr->type}) {
 		printf("%s\n", $rr->string);
 	} else {
-		printf("%s\t%d\t%s\tTYPE%d\t\\# %d %s\n",
+		printf("%s.\t%d\t%s\tTYPE%d\t\\# %d %s\n",
 			$rr->name, $rr->ttl, $rr->class,
 		       	Net::DNS::typesbyname($rr->type),
 			length($rr->rdata),
